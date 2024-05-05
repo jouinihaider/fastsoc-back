@@ -20,7 +20,6 @@ class OrderResource extends JsonResource
             'id' => $this->id,
             'customer' => new CustomerResource($this->customer),
             'offer' => new OfferResource($this->offer),
-            //'vendors' => $this->whenNotNull(VendorResource::collection($this->vendors)),
             'vendors' => $this->whenNotNull($vendors),
             'licenseCount' => $this->whenNotNull($this->license_count),
             'description' => $this->whenNotNull($this->description),
